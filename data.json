@@ -1,0 +1,46 @@
+{
+  "foodItems": [
+    {
+      "id": 1,
+      "name": "Pizza ",
+      "image": "empty",
+      "description": "Italian Food",
+      "price": "450",
+      "category": "foreign",
+      "isEnabled": true
+    },
+    {
+      "id": 2,
+      "name": "کباب",
+      "image": "empty",
+      "description": "بهترین غذای ایرانی",
+      "price": "340",
+      "category": "iranian",
+      "isEnabled": true
+    },
+    {
+      "id": 3,
+      "name": "قرمه سبزی",
+      "image": "empty",
+      "description": "خورشت",
+      "price": "120",
+      "category": "iranian",
+      "isEnabled": true
+    }
+  ],
+  "shoppingCarts": [
+    {
+      "userId": "5",
+      "items": [
+        {
+          "foodItemId": 2,
+          "quantity": 1
+        },
+        {
+          "foodItemId": 2,
+          "quantity": 1
+        }
+      ]
+    }
+  ]
+}

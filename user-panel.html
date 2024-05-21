@@ -1,0 +1,39 @@
+<!-- user-panel.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <h1>User Panel</h1>
+            <ul>
+                <li><a onclick="showManageAccount()">Manage Account</a></li>
+                <li><a onclick="viewMenuList()">View Menu</a></li>
+                <li><a onclick="viewShoppingCart(localStorage.getItem('userId'))">View Shopping Cart</a></li>
+                <li><a onclick="viewOrders(localStorage.getItem('userId'))">View Order</a></li>
+                <li><a onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="content" id="user-content">
+            <!-- Content will be dynamically updated here based on user actions -->
+        </div>
+        
+        <div id="admin-content">
+            <!-- This is where the content will be displayed by JavaScript -->
+        </div>
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Food Online System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <h1>Admin Panel</h1>
+            <div class="admin-actions">
+                <button onclick="addNewFoodItem()">Add New Food Item</button>
+                <button onclick="viewAllFoodsItem()">View All Foods</button>
+                <button onclick="viewAllUsers()">View All Users</button>
+                <button onclick="logout()">Logout</button> 
+                <!-- Add other buttons for different actions -->
+            </div>
+        </div>
+
+        <!-- Content container -->
+        <div class="content">
+            <!-- Placeholder div for content -->
+            <div id="admin-content">
+                <!-- Content for actions will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        function addNewFoodItem() {
+            // Load content for adding a new food item
+            document.getElementById('admin-content').innerHTML = `
+                <h2>Add New Food Item</h2>
+                <form id="addFoodItemForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="image">Image URL:</label>
+                    <input type="text" id="image" name="image" required>
+                    
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" required></textarea>
+                    
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" name="price" required>
+                    
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="iranian">Iranian</option>
+                        <option value="foreign">Foreign</option>
+                    </select>
+                    
+                    <button type="button" onclick="submitNewFoodItem()">Submit</button>
+                </form>
+            `;
+        }
+
+        // Inside the script tag in admin-panel.html
+        function editFoodItem(foodId) {
+            // Load content for editing a food item
+            document.getElementById('admin-content').innerHTML = `
+        <h2>Edit Food Item</h2>
+        <form id="editFoodItemForm">
+            <label for="edit-name">Name:</label>
+            <input type="text" id="edit-name" name="edit-name" required>
+            
+            <label for="edit-image">Image URL:</label>
+            <input type="text" id="edit-image" name="edit-image" required>
+            
+            <label for="edit-description">Description:</label>
+            <textarea id="edit-description" name="edit-description" required></textarea>
+            
+            <label for="edit-price">Price:</label>
+            <input type="number" id="edit-price" name="edit-price" required>
+            
+            <label for="edit-category">Category:</label>
+            <select id="edit-category" name="edit-category" required>
+                <option value="iranian">Iranian</option>
+                <option value="foreign">Foreign</option>            
+            </select>
+            
+            <button type="button" onclick="submitEditFoodItem(${foodId})">Submit Edit</button>
+        </form>
+    `;
+        }
+
+
+
+
+
+        // ... (existing code)
+    </script>
+</body>
+
+</html>
